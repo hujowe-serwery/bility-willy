@@ -1,0 +1,134 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>your average clicker game</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="loading-screen">
+    <div id="loading-content">
+      <h2 id="loading-text">Loading...</h2>
+      <div id="loading-bar-container">
+        <div id="loading-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="credits-screen">
+    <div id="credits-content">
+      <img src="/froztylogo.png" alt="Frozty Logo">
+      <p id="credits-text">Created by ItzFrozty</p>
+    </div>
+  </div>
+
+  <button id="settings-button">Settings</button>
+  <button id="reset-game" class="options-button">Reset Game</button>
+  <div class="game-container">
+    <h1 id="game-title">your average clicker game</h1>
+    <div class="menu-tabs">
+      <button id="tab-clicker" class="active">Clicker</button>
+      <button id="tab-upgrades">Upgrades</button>
+    </div>
+    <div class="panels">
+      <div id="clicker-panel" class="clicker-panel">
+        <div id="score">Score: 0</div>
+        <button id="click-button">
+          <div class="decal"></div>
+        </button>
+      </div>
+      <div id="upgrades-panel" class="upgrades-panel hidden">
+        <div id="upgrades-content">
+          <h2 id="upgrades-header">Upgrades</h2>
+          <div id="upgrades-list">
+            <button id="upgrade-multiplier">
+              <span id="upgrade-click-value-label">Upgrade Click Value</span>
+              ( <span id="multiplier-cost">10</span> <span class="pts-label">pts</span> )
+            </button>
+            <button id="upgrade-auto">
+              <span id="buy-auto-clicker-label">Buy Auto Clicker</span>
+              ( <span id="auto-cost">50</span> <span class="pts-label">pts</span> )
+            </button>
+            <h2 id="extra-upgrades-header">Extra Upgrades</h2>
+            <button id="upgrade-auto-eff">
+              <span id="upgrade-auto-eff-label">Upgrade Auto Efficiency</span>
+              ( <span id="auto-eff-cost">150</span> <span class="pts-label">pts</span> )
+            </button>
+            <button id="upgrade-click-frenzy">
+              <span id="upgrade-click-frenzy-label">Activate Click Frenzy</span>
+              ( <span id="click-frenzy-cost">200</span> <span class="pts-label">pts</span> )
+            </button>
+            <button id="upgrade-auto-speed">
+              <span id="upgrade-auto-speed-label">Upgrade Auto Speed</span>
+              ( <span id="auto-speed-cost">200</span> <span class="pts-label">pts</span> )
+            </button>
+            <button id="upgrade-golden-bonus">
+              <span id="upgrade-golden-bonus-label">Upgrade Golden Bonus</span>
+              ( <span id="golden-bonus-cost">200</span> <span class="pts-label">pts</span> )
+            </button>
+            <button id="upgrade-combo-multiplier">
+              <span id="upgrade-combo-multiplier-label">Upgrade Combo Multiplier</span>
+              ( <span id="combo-multiplier-cost">300</span> <span class="pts-label">pts</span> )
+            </button>
+          </div>
+        </div>
+        <div id="unlock-overlay">
+          <p id="unlock-overlay-text">Upgrades are locked.</p>
+          <button id="unlock-upgrades">Unlock Upgrades (∞ pts)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="settings-screen">
+    <div id="settings-content">
+      <h2 id="settings-title">Settings</h2>
+      <label>
+        <input type="checkbox" id="dark-mode-toggle">
+        <span id="dark-mode-label">Dark Mode</span>
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" id="sound-toggle" checked>
+        <span id="sound-label">Sound</span>
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" id="large-numbers-toggle">
+        <span id="large-numbers-label">Large Numbers</span>
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" id="disable-golden-things-toggle">
+        <span id="disable-golden-things-label">Disable Golden Things (youll regret it)</span>
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" id="particles-toggle" checked>
+        <span id="particles-label">Particle Effects</span>
+      </label>
+      <br>
+      <label for="language-select" id="language-label">Language</label>
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="zh">中文</option>
+        <option value="jp">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский</option>
+      </select>
+      <br>
+      <button id="secret-toggle"></button>
+      <br>
+      <button id="close-settings">Close</button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+  <script type="module" src="settingsModule.js"></script>
+</body>
+</html>
